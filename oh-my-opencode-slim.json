@@ -1,0 +1,114 @@
+{
+  "preset": "free-opencode",
+  "presets": {
+    "free-opencode": {
+      "orchestrator": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "skills": [
+          "codemap",
+          "pdf",
+          "simplify"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
+      },
+      "oracle": {
+        "model": [
+          "opencode/nemotron-3-ultra-free", 
+          "opencode/deepseek-v4-flash-free"
+        ],
+        "skills": [
+          "simplify",
+          "oracle-decision-lens"
+        ],
+        "mcps": []
+      },
+      "council": {
+        "model": [
+          "opencode/nemotron-3-ultra-free", 
+          "opencode/deepseek-v4-flash-free"
+        ],
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "skills": [],
+        "mcps": [
+          "websearch", 
+          "grep_app"
+        ]
+      },
+      "explorer": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": [
+          "opencode/mimo-v2.5-free",
+          "opencode/deepseek-v4-flash-free"
+        ],
+        "skills": [
+          "frontend-design",
+          "banner-design",
+          "brand",
+          "design",
+          "design-system",
+          "slides",
+          "ui-styling",
+          "ui-ux-pro-max"
+      ],
+        "mcps": []
+      },
+      "fixer": {
+        "model": [
+          "opencode/deepseek-v4-flash-free"
+        ],
+        "skills": [
+          "fixer-code-standards",
+          "codemap",
+          "simplify",
+          "clonedeps",
+          "xlsx"
+        ],
+        "mcps": []
+      },
+      "observer": {
+        "model": [
+          "opencode/mimo-v2.5-free",
+          "opencode/deepseek-v4-flash-free"
+        ],
+        "skills": [],
+        "mcps": []
+      },
+      "validator": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "skills": [
+          "codemap",
+          "simplify"
+        ],
+        "mcps": []
+      },
+      "documenter": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "skills": [
+          "simplify",
+          "doc-coauthoring",
+          "documentation-writer",
+          "design-doc-mermaid",
+          "pdf"
+        ],
+        "mcps": []
+      }
+    }
+  },
+  "fallback": {
+    "enabled": true,
+    "timeoutMs": 120000,
+    "retryDelayMs": 500,
+    "retry_on_empty": true
+  }
+}

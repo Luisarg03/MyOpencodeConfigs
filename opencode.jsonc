@@ -1,0 +1,125 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "opencode": {
+      "options": {
+        "timeout": 120000,
+        "setCacheKey": true
+      }
+    }
+  },
+  "plugin": [
+    "oh-my-opencode-slim",
+    "@tarquinen/opencode-dcp@latest",
+    "./plugins/strip-cache-key.ts",
+    "./plugins/delegation.ts",
+    "./plugins/skill-loader.ts",
+    "./plugins/ponytail.mjs",
+    "./plugins/caveman/plugin.js"
+  ],
+  "instructions": ["./AGENTS.md"],
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
+      "enabled": false
+    }
+  },
+  "agent": {
+    "fixer": {
+      "description": "Fast execution specialist for well-defined tasks, which empowers orchestrator with parallel, speedy executions",
+      "mode": "subagent",
+      "permission": {
+        "write": "allow",
+        "edit": "allow",
+        "bash": { "*": "allow" },
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "designer": {
+      "description": "UI/UX specialist for intentional, polished experiences",
+      "mode": "subagent",
+      "permission": {
+        "write": "allow",
+        "edit": "allow",
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "documenter": {
+      "permission": {
+        "read": "allow",
+        "write": "allow",
+        "edit": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "bash": "allow",
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "refactor": {
+      "permission": {
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "explorer": {
+      "permission": {
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "librarian": {
+      "permission": {
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "oracle": {
+      "permission": {
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "observer": {
+      "permission": {
+        "task": "deny",
+        "subtask": "deny"
+      }
+    },
+    "validator": {
+      "permission": {
+        "task": "deny",
+        "subtask": "deny"
+      }
+    }
+  },
+  "permission": {
+    "external_directory": "ask",
+    "write": "allow",
+    "edit": "allow",
+    "bash": {
+      "*": "allow",
+      "git *": "allow",
+      "ls": "allow",
+      "mkdir *": "allow",
+      "which *": "allow",
+      "ls *": "allow",
+      "cp *": "allow",
+      "mv *": "allow",
+      "cat *": "allow",
+      "echo *": "allow",
+      "rtk *": "allow",
+      "rm *": "deny",
+      "rm": "deny",
+      "npm *": "deny",
+      "npm": "deny"
+    }
+  },
+  "lsp": true
+}
