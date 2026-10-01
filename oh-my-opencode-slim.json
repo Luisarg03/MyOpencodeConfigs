@@ -1,0 +1,276 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "preset": "go-work",
+  "presets": {
+    "zen-work": {
+      "orchestrator": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "max",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "codemap",
+          "simplify"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
+      },
+      "oracle": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "max",
+        "skills": [
+          "simplify",
+          "oracle-decision-lens",
+          "ponytail-review",
+          "caveman"
+        ],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "opencode/big-pickle",
+        "skills": [],
+        "mcps": [
+          "websearch",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "explorer": {
+        "model": "opencode/big-pickle",
+        "skills": [
+          "codemap"
+        ],
+        "mcps": []
+      },
+      "designer": {
+        "model": "opencode/mimo-v2.5-free",
+        "skills": [
+          "frontend-design",
+          "ui-styling",
+          "ui-ux-pro-max",
+          "ponytail",
+          "caveman"
+        ],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "high",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "fixer-code-standards",
+          "codemap",
+          "verification-planning",
+          "simplify"
+        ],
+        "mcps": []
+      }
+    },
+    "go-work": {
+      "orchestrator": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "max",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "codemap",
+          "simplify"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
+      },
+      "oracle": {
+        "model": "opencode-go/deepseek-v4-pro",
+        "variant": "max",
+        "skills": [
+          "simplify",
+          "oracle-decision-lens",
+          "ponytail-review",
+          "caveman"
+        ],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": [
+          "websearch",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "explorer": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "low",
+        "skills": [
+          "codemap"
+        ],
+        "mcps": []
+      },
+      "designer": {
+        "model": "opencode-go/mimo-v2.5",
+        "skills": [
+          "frontend-design",
+          "ui-styling",
+          "ui-ux-pro-max",
+          "ponytail",
+          "caveman"
+        ],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "high",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "fixer-code-standards",
+          "codemap",
+          "verification-planning",
+          "simplify"
+        ],
+        "mcps": []
+      }
+    },
+    "copilot-work": {
+      "orchestrator": {
+        "model": "github-copilot/gpt-5.4-mini",
+        "variant": "xhigh",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "codemap",
+          "simplify"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
+      },
+      "oracle": {
+        "model": "github-copilot/claude-sonnet-5",
+        "variant": "medium",
+        "skills": [
+          "simplify",
+          "oracle-decision-lens",
+          "ponytail-review",
+          "caveman"
+        ],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "github-copilot/gpt-5-mini",
+        "variant": "medium",
+        "skills": [
+          "codemap"
+        ],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "github-copilot/gpt-5-mini",
+        "variant": "medium",
+        "skills": [],
+        "mcps": [
+          "websearch",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "designer": {
+        "model": "github-copilot/claude-haiku-4.5",
+        "variant": "high",
+        "skills": [
+          "frontend-design",
+          "ui-styling",
+          "ui-ux-pro-max",
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "github-copilot/gpt-5-mini",
+        "variant": "medium",
+        "skills": [
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": []
+      },
+      "observer": {
+        "model": "github-copilot/mai-code-1-flash-picker",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      }
+    },
+    "local-cloud-work": {
+      "orchestrator": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "high",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "codemap",
+          "simplify"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
+      },
+      "oracle": {
+        "model": "opencode/nemotron-3-ultra-free",
+        "variant": "xhigh",
+        "skills": [
+          "simplify",
+          "oracle-decision-lens",
+          "ponytail-review"
+        ],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "openrouter/cohere/north-mini-code:free",
+        "skills": [],
+        "mcps": [
+          "websearch",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "explorer": {
+        "model": "openrouter/cohere/north-mini-code:free",
+        "skills": [
+          "codemap"
+        ],
+        "mcps": []
+      },
+      "designer": {
+        "model": "opencode/mimo-v2.5-free",
+        "variant": "medium",
+        "skills": [
+          "frontend-design",
+          "ui-styling",
+          "ui-ux-pro-max",
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "ollama/qwen3:8b-16k",
+        "skills": [
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": []
+      }
+    }
+  }
+}
