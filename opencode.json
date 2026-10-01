@@ -1,0 +1,107 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": "notify",
+  "model": "github-copilot/gpt-5.6-luna",
+  "provider": {
+    "opencode": {
+      "options": {
+        "setCacheKey": true
+      }
+    }
+  },
+  "plugin": [
+    "oh-my-opencode-slim",
+    "@dietrichgebert/ponytail",
+    "openslimedit@latest",
+    "@ramtinj95/opencode-tokenscope",
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "./plugins/caveman/plugin.js",
+    "./plugins/notification.js"
+  ],
+  "instructions": [
+    "./AGENTS.md"
+  ],
+  "permission": {
+    "*": "allow",
+    "external_directory": "allow",
+    "doom_loop": "allow",
+    "bash": {
+      "*": "allow",
+
+      "rm": "deny",
+      "rm *": "deny",
+      "unlink *": "deny",
+      "shred *": "deny",
+      "find * -delete*": "deny",
+      "find * -exec rm*": "deny",
+
+      "git push --force*": "deny",
+      "git push -f*": "deny",
+      "git push * --force*": "deny",
+      "git push * -f": "deny",
+      "git push --delete*": "deny",
+      "git push * --delete*": "deny",
+      "git push * :*": "deny",
+      "git reset --hard*": "deny",
+      "git clean *": "deny",
+      "git checkout -- *": "deny",
+      "git checkout .": "deny",
+      "git restore *": "deny",
+      "git branch -D *": "deny",
+      "git branch --delete --force*": "deny",
+      "git stash drop*": "deny",
+      "git stash clear*": "deny",
+      "git reflog expire*": "deny",
+      "git reflog delete*": "deny",
+      "git gc --prune*": "deny",
+      "git filter-branch*": "deny",
+      "git update-ref -d*": "deny"
+    }
+  },
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": false,
+  "mcp": {
+    "memory-server": {
+      "type": "local",
+      "command": [
+        "uv",
+        "run",
+        "--directory",
+        "{env:HOME}/Private/Projects/dsh-memory-vault/memory-vault-server",
+        "python",
+        "server.py"
+      ],
+      "enabled": true,
+      "environment": {
+        "MEMORY_PATH": "{env:HOME}/.memories"
+      }
+    },
+    "brave-search": {
+      "type": "local",
+      "command": ["npx", "-y", "@brave/brave-search-mcp-server"],
+      "environment": {
+        "BRAVE_API_KEY": "{env:BRAVE_API_KEY}"
+      },
+      "enabled": true
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
+      "enabled": true
+    }
+  },
+  "compaction": {
+    "auto": false,
+    "prune": false
+  }
+}

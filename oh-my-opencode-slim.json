@@ -1,0 +1,152 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "preset": "user-work",
+  "presets": {
+    "copilot-work": {
+      "orchestrator": {
+        "model": "github-copilot/gpt-6.1-sol",
+        "variant": "low",
+        "skills": [
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search"
+        ]
+      },
+      "oracle": {
+        "model": "github-copilot/gpt-6.1-sol",
+        "variant": "medium",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "ponytail-review"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search"
+        ]
+      },
+      "designer": {
+        "model": "github-copilot/gpt-6.1-sol",
+        "variant": "medium",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "frontend-desing"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search",
+          "webapp-testing"
+        ]
+      },
+      "explorer": {
+        "model": "github-copilot/gpt-6-luna",
+        "variant": "low",
+        "skills": [
+          "caveman"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search"
+        ]
+      },
+      "librarian": {
+        "model": "github-copilot/gpt-6-luna",
+        "variant": "low",
+        "skills": [
+          "caveman"
+        ],
+        "mcps": [
+          "brave-search",
+          "context7",
+          "memory-server"
+        ]
+      },
+      "fixer": {
+        "model": "github-copilot/gpt-6-luna",
+        "variant": "max",
+        "skills": [
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": []
+      }
+    },
+    "user-work": {
+      "orchestrator": {
+        "model": "opencode-go/space-bunny-free",
+        "variant": "xhigh",
+        "skills": [
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search"
+        ]
+      },
+      "oracle": {
+        "model": "opencode-go/space-bunny-free",
+        "variant": "max",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "ponytail-review"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search"
+        ]
+      },
+      "designer": {
+        "model": "opencode-go/space-bunny-free",
+        "variant": "xhigh",
+        "skills": [
+          "caveman",
+          "ponytail",
+          "frontend-desing"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search",
+          "webapp-testing"
+        ]
+      },
+      "explorer": {
+        "model": "opencode-go/space-bunny-free",
+        "variant": "low",
+        "skills": [
+          "caveman"
+        ],
+        "mcps": [
+          "memory-server",
+          "brave-search"
+        ]
+      },
+      "librarian": {
+        "model": "opencode-go/space-bunny-free",
+        "variant": "low",
+        "skills": [
+          "caveman"
+        ],
+        "mcps": [
+          "brave-search",
+          "context7",
+          "memory-server"
+        ]
+      },
+      "fixer": {
+        "model": "opencode-go/space-bunny-free",
+        "variant": "max",
+        "skills": [
+          "caveman",
+          "ponytail"
+        ],
+        "mcps": []
+      }
+    }
+  }
+}

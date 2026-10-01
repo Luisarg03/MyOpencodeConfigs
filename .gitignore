@@ -1,0 +1,49 @@
+# dependencies
+node_modules/
+
+# secrets — defensive; never commit credentials
+auth.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.asc
+.netrc
+credentials*
+*.secret
+
+# opencode runtime data (normally lives in ~/.local/share/opencode)
+opencode.db*
+*.db
+*.db-wal
+*.db-shm
+log/
+storage/
+snapshot/
+tool-output/
+
+# python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# build / dist
+dist/
+build/
+out/
+
+# os / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+
+# generated manifests
+.oh-my-opencode-slim/skills-manifest.json
